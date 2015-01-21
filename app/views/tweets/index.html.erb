@@ -1,0 +1,13 @@
+<div class="panel panel-info">
+ <% @tweets.each do |tweet| %>
+ 	<div class="panel-heading">
+ 	 <h1 class="panel-title"><%= tweet.user %></h1>
+ 	</div>
+ 	<div class="panel-body">
+ 	 <p><%= tweet.body %></p>
+ 	</div>
+ 	<div class="footer">
+ 	 <%= link_to 'Edit', edit_tweet_path(tweet), class: "btn btn-default" %>
+ 	</div>
+ <% end %>
+</div>
